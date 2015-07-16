@@ -41,3 +41,11 @@ class GeometryTestCase(unittest.TestCase):
 		self.assertEqual(geometry.guess_ratio(400, 200), "2:1")
 		self.assertEqual(geometry.guess_ratio(401, 200), "401:200")
 		self.assertEqual(geometry.guess_ratio(1920, 1080), "16:9")
+
+	def test_max_bounds(self):
+		self.assertTrue(callable(geometry.max_bounds))
+		mb = geometry.max_bounds
+		self.assertEqual(mb(100, 100, 1, 1), (0, 0, 100, 100))
+		self.assertEqual(mb(100, 100, 2, 1), (0, 25, 100, 75))
+		self.assertEqual(mb(200, 100, 2, 1), (0, 0, 200, 100))
+		self.assertEqual(mb(200, 100, 2, 10), (90, 0, 110, 100))
