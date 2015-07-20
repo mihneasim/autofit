@@ -14,5 +14,12 @@ How to use
     import autofit
 
     lolcat = Image.open('lolcat.jpg')
+    # center crop, cut out strips left/right or top/bottom to keep ratio
     output = autofit.autofit_crop(lolcat, 640, 640)
+    # center image, fill with transparency left/right or top/bottom
+    output = autofit.autofit_fill(lolcat, 640, 640)
+    # or maybe with solid red
+    output = autofit.autofit_fill(lolcat, 640, 640, fill=(255, 0, 0))
     output.save()
+    # GIFs don't scare us
+    new_file = autofit.resize_file('loops.gif', 100, 100)
