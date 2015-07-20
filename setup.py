@@ -53,7 +53,7 @@ setup(
 
     packages=find_packages(exclude=['docs', 'tests*']),
 
-    install_requires=['PIL'],
+    install_requires=['PIL', 'numpy'],
 
     extras_require={
         'dev': [],

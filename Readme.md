@@ -14,5 +14,5 @@ How to use
     import autofit
 
     lolcat = Image.open('lolcat.jpg')
-    output = autofit.autofit(lolcat, 640, 640)
+    output = autofit.autofit_crop(lolcat, 640, 640)
     output.save()
