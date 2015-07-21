@@ -1,11 +1,12 @@
 AutoFit
 =============
 
-The missing crop function in [PIL](http://www.pythonware.com/products/pil).
+The missing crop/frame tools in [PIL](http://www.pythonware.com/products/pil).
 
 What it does
 +++++++++++++++
-It resizes and crops any image to any size. Yes, it cuts out stuff.
+It resizes and crops any image to any size. Yes, it cuts out stuff, or fills
+in with transparency/solid colour.
 
 How to use
 ++++++++++++++
